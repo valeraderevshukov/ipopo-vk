@@ -19,7 +19,10 @@ div, input, textarea, select, button, h1, h2, h3, h4, h5, h6, a, span, a:focus {
 ul, ol { list-style-type: none; }
 table { border-spacing: 0; border-collapse: collapse; width: 100%; }
 
-body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; }
+html { -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+* { -webkit-box-sizing: border-box; box-sizing: border-box; }
+*:before, *:after { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 @font-face { font-family: "svgfont"; src: url("fonts/svgfont.eot"); src: url("fonts/svgfont.eot?#iefix") format("eot"), url("fonts/svgfont.woff") format("woff"), url("fonts/svgfont.woff2") format("woff2"), url("fonts/svgfont.ttf") format("truetype"); font-weight: normal; font-style: normal; }
 .icon, [class^="icon-"], [class*=" icon-"] { font-family: "svgfont"; font-style: normal; font-weight: normal; text-rendering: auto; speak: none; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
@@ -30,10 +33,93 @@ body { font-family: Arial, sans-serif; font-size: 12px; line-height: 1.4; }
 
 .icon-skrill:before { content: ""; }
 
+@font-face { font-family: blogger_sans-bold; src: url("fonts/blogger_sans-bold.eot"); src: url("fonts/blogger_sans-bold.eot?#iefix") format("embedded-opentype"), url("fonts/blogger_sans-bold.woff2") format("woff2"), url("fonts/blogger_sans-bold.woff") format("woff"), url("fonts/blogger_sans-bold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: ptsans-bold; src: url("fonts/ptsans-bold.eot"); src: url("fonts/ptsans-bold.eot?#iefix") format("embedded-opentype"), url("fonts/ptsans-bold.woff2") format("woff2"), url("fonts/ptsans-bold.woff") format("woff"), url("fonts/ptsans-bold.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: bloggersans-medium; src: url("fonts/bloggersans-medium.eot"); src: url("fonts/bloggersans-medium.eot?#iefix") format("embedded-opentype"), url("fonts/bloggersans-medium.woff2") format("woff2"), url("fonts/bloggersans-medium.woff") format("woff"), url("fonts/bloggersans-medium.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: ptsans-regular; src: url("fonts/ptsans-regular.eot"); src: url("fonts/ptsans-regular.eot?#iefix") format("embedded-opentype"), url("fonts/ptsans-regular.woff2") format("woff2"), url("fonts/ptsans-regular.woff") format("woff"), url("fonts/ptsans-regular.ttf") format("truetype"); font-weight: normal; font-style: normal; }
+body { font-family: "ptsans-regular", Arial, sans-serif; font-weight: 400; font-size: 14px; line-height: 1.4; max-height: 800px; overflow: auto; }
+
+a { text-decoration: none; }
+
+.out { margin: 0 auto; padding: 0 8px; width: 760px; }
+
+.wrap { margin-top: 38px; }
+
+.topic { margin-bottom: 10px; *zoom: 1; }
+.topic:after { content: " "; display: table; clear: both; }
+.topic .title { float: left; }
+.topic .show-more { float: right; }
+
+.title { color: #feb737; font-family: "blogger_sans-bold", Georgia, sans-serif; font-weight: 700; font-size: 18px; text-transform: uppercase; }
+.title .icon { margin-right: 2px; }
+
+.show-more { color: #8e5bb4; font-family: "blogger_sans-bold", Georgia, sans-serif; font-weight: 700; font-size: 18px; text-transform: uppercase; background-color: transparent; display: inline-block; }
+.show-more .icon { margin-right: 2px; }
+
+.btn { padding: 0 10px; height: 24px; color: #fff; font-family: "ptsans-regular", Arial, sans-serif; font-weight: 400; text-align: center; font-size: 12px; line-height: 24px; -webkit-border-radius: 24px; border-radius: 24px; -webkit-transition: background 0.2s; transition: background 0.2s; background: #8e5bb4; display: inline-block; }
+.btn:hover { background: #593574; }
+
+button.btn { line-height: 1; }
+
+.field + .field { margin-top: 30px; }
+
+.row { *zoom: 1; }
+.row:after { content: " "; display: table; clear: both; }
+.row .item { float: left; }
+
+.item { margin-left: 16px; width: 136px; color: #8e5bb4; }
+.item:first-child { margin-left: 0; }
+.item:nth-child(odd) .item__in:before { -webkit-transform: rotate(-2deg); -ms-transform: rotate(-2deg); transform: rotate(-2deg); }
+.item:nth-child(odd) .item__in:after { -webkit-transform: rotate(1deg); -ms-transform: rotate(1deg); transform: rotate(1deg); }
+.item__in { position: relative; margin-bottom: 14px; font-size: 0; }
+.item__in:before, .item__in:after { position: absolute; content: ""; -webkit-border-radius: 5px; border-radius: 5px; }
+.item__in:before { top: 2px; left: 1px; right: 2px; bottom: 2px; z-index: 2; -webkit-transform: rotate(2deg); -ms-transform: rotate(2deg); transform: rotate(2deg); border: 1px solid #fff; }
+.item__in:after { top: 3px; left: 1px; right: 0; height: 100%; z-index: -1; -webkit-transform: rotate(-1deg); -ms-transform: rotate(-1deg); transform: rotate(-1deg); border: 2px solid #feb737; }
+.item__img { position: relative; max-height: 136px; -webkit-border-radius: 5px; border-radius: 5px; overflow: hidden; display: block; }
+.item__img:before { position: absolute; content: ""; top: 0; left: 0; bottom: 0; right: 0; z-index: 3; }
+.item__img img { position: relative; z-index: 1; display: block; }
+.item .holiday { line-height: 1.2; }
+.item .date { margin-top: 2px; }
+.item .btn { margin-top: 9px; width: 100%; display: block; }
+.item .btn + .btn { margin-top: 8px; }
+
+.name { color: #8e5bb4; -webkit-transition: border-color 0.2s; transition: border-color 0.2s; border-bottom: 1px solid transparent; }
+.name:hover { border-color: #8e5bb4; }
+
+.holiday { font-size: 18px; font-family: "blogger_sans-bold", Georgia, sans-serif; font-weight: 700; }
+
+.date { font-family: "ptsans-bold", Arial, sans-serif; font-weight: 700; font-size: 12px; color: #feb737; display: block; }
+
 .l { *zoom: 1; }
 .l:after { content: " "; display: table; clear: both; }
 .l .l-col1 { float: left; width: 20%; }
 .l .l-col2 { float: right; width: 70%; }
+
+header { height: 88px; *zoom: 1; }
+header:after { content: " "; display: table; clear: both; }
+header:before { position: absolute; content: ""; top: 80px; left: 0; right: 0; height: 8px; background-image: url("../img/svg/wave.svg"); }
+
+.logo { float: left; margin: 8px 0 0 9px; color: #a6c3fd; font-size: 0; font-family: "bloggersans-medium", Georgia, sans-serif; font-weight: 500; }
+.logo__inf { font-size: 9.6px; line-height: 1; display: block; }
+
+.menu { float: right; font-size: 0; text-transform: uppercase; font-family: "blogger_sans-bold", Georgia, sans-serif; font-weight: 700; }
+.menu__item { margin-left: 20px; vertical-align: top; font-size: 14px; background-size: contain; background-repeat: no-repeat; background-position: 0 0; display: inline-block; }
+.menu__item:first-child { margin-left: 0; }
+.menu__item.is-orange { background-image: url(../img/menu-orange.png); }
+.menu__item.is-pink { background-image: url(../img/menu-pink.png); }
+.menu__item.is-blue { background-image: url(../img/menu-blue.png); }
+.menu__item.is-purple { background-image: url(../img/menu-purple.png); }
+.menu a { position: relative; padding: 16px 15px; height: 63px; width: 132px; color: #fff; line-height: 34px; display: block; z-index: 1; }
+.menu a span { line-height: 1.2; width: 50%; vertical-align: middle; display: inline-block; }
+.menu .icon { margin-right: 5px; vertical-align: top; }
+
+.icon-logo { background: url("../img/svg/logo.svg") no-repeat 0 0; background-size: 123px 45px; width: 123px; height: 45px; display: inline-block; }
+.icon-gift { background: url("../img/svg/gift.svg") no-repeat 0 0; background-size: 31px 32px; width: 31px; height: 32px; display: inline-block; }
+.icon-friends { background: url("../img/svg/friends.svg") no-repeat 0 0; background-size: 31px 32px; width: 31px; height: 32px; display: inline-block; }
+.icon-doings { background: url("../img/svg/doings.svg") no-repeat 0 0; background-size: 30px 33px; width: 30px; height: 33px; display: inline-block; }
+.icon-add { background: url("../img/svg/add.svg") no-repeat 0 0; background-size: 33px 32px; width: 33px; height: 32px; display: inline-block; }
+.icon-more { background: url("../img/svg/more.svg") no-repeat 0 0; background-size: 16px 16px; width: 16px; height: 16px; display: inline-block; }
+.icon-star { background: url("../img/svg/star.svg") no-repeat 0 0; background-size: 17px 16px; width: 17px; height: 16px; display: inline-block; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){
  *{ -webkit-text-size-adjust: none; } }
 @media only screen and (max-width: 1024px){

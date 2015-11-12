@@ -47,11 +47,184 @@
 // p
 // 	+jpg(bla)
 
++font(blogger_sans-bold,blogger_sans-bold)
++font(ptsans-bold,ptsans-bold)	
++font(bloggersans-medium,bloggersans-medium)  
++font(ptsans-regular,ptsans-regular)
+=b700
+	font-family: 'blogger_sans-bold', Georgia, sans-serif
+	font-weight: 700
+=b500
+	font-family: 'bloggersans-medium', Georgia, sans-serif
+	font-weight: 500 
+=p700
+	font-family: 'ptsans-bold', Arial, sans-serif
+	font-weight: 700
+=p400
+	font-family: 'ptsans-regular', Arial, sans-serif
+	font-weight: 400
 
 body
-	font-family: Arial, sans-serif
-	font-size: 12px
+	+p400
+	font-size: 14px
 	line-height: 1.4
+	max-height: 800px
+	overflow: auto
+a
+	text-decoration: none
 
 
 // common blocks
+.out
+	margin: 0 auto
+	padding: 0 8px
+	width: 760px
+
+// wrap
+.wrap
+	margin-top: 38px
+
+// topic
+.topic
+	margin-bottom: 10px
+	+clr
+	.title
+		float: left
+	.show-more
+		float: right
+
+// title
+.title
+	color: $orange
+	+b700
+	font-size: 18px
+	text-transform: uppercase
+	.icon
+		margin-right: 2px
+
+// show-more
+.show-more
+	color: $purple
+	+b700
+	font-size: 18px
+	text-transform: uppercase
+	background-color: transparent
+	display: inline-block
+	.icon
+		margin-right: 2px
+
+// btn
+.btn
+	padding: 0 10px
+	height: 24px
+	color: #fff
+	+p400
+	text-align: center
+	font-size: 12px
+	line-height: 24px
+	border-radius: 24px
+	transition: background .2s
+	background: $purple
+	display: inline-block
+	&:hover
+		background: darken( $purple, 20%)
+button.btn
+	line-height: 1
+
+// field
+.field
+	& + .field
+		margin-top: 30px
+
+// row
+.row
+	+clr
+	.item
+		float: left
+
+// item
+.item
+	margin-left: 16px
+	width: 136px
+	color: $purple
+	&:first-child
+		margin-left: 0
+	&:nth-child(odd)
+		.item__in
+			&:before
+				transform: rotate(-2deg)
+			&:after
+				transform: rotate(1deg)
+	&__in
+		position: relative
+		margin-bottom: 14px
+		font-size: 0
+		&:before,
+		&:after
+			position: absolute
+			content: ''
+			border-radius: 5px
+		&:before
+			top: 2px
+			left: 1px
+			right: 2px
+			bottom: 2px
+			z-index: 2
+			transform: rotate(2deg)
+			border: 1px solid #fff
+		&:after
+			top: 3px
+			left: 1px
+			right: 0
+			height: 100%
+			z-index: -1
+			transform: rotate(-1deg)
+			border: 2px solid $orange
+	&__img
+		position: relative
+		max-height: 136px
+		border-radius: 5px
+		overflow: hidden
+		display: block
+		&:before
+			position: absolute
+			content: ''
+			top: 0
+			left: 0
+			bottom: 0
+			right: 0
+			z-index: 3
+		img
+			position: relative
+			z-index: 1
+			display: block
+	.holiday
+		line-height: 1.2
+	.date
+		margin-top: 2px
+	.btn
+		margin-top: 9px
+		width: 100%
+		display: block
+		& + .btn
+			margin-top: 8px
+
+// name
+.name
+	color: $purple
+	transition: border-color .2s
+	border-bottom: 1px solid transparent
+	&:hover
+		border-color: $purple
+
+// holiday
+.holiday
+	font-size: 18px
+	+b700
+
+// date
+.date
+	+p700
+	font-size: 12px
+	color: $orange
+	display: block

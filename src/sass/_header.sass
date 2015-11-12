@@ -1,0 +1,65 @@
+// header
+header
+	height: 88px
+	+clr
+	&:before
+		position: absolute
+		content: ''
+		top: 80px
+		left: 0
+		right: 0
+		height: 8px
+		background-image: url("../img/svg/wave.svg")
+
+.logo
+	float: left
+	margin: 8px 0 0 9px
+	color: $l_blue
+	font-size: 0
+	+b500
+	&__inf
+		font-size: 9.6px
+		line-height: 1
+		display: block
+
+// menu
+.menu
+	float: right
+	font-size: 0
+	text-transform: uppercase
+	+b700
+	&__item
+		margin-left: 20px
+		vertical-align: top
+		font-size: 14px
+		background-size: contain
+		background-repeat: no-repeat
+		background-position: 0 0
+		display: inline-block
+		&:first-child
+			margin-left: 0
+		&.is-orange
+			background-image: url(../img/menu-orange.png)
+		&.is-pink
+			background-image: url(../img/menu-pink.png)
+		&.is-blue
+			background-image: url(../img/menu-blue.png)
+		&.is-purple
+			background-image: url(../img/menu-purple.png)
+	a
+		position: relative
+		padding: 16px 15px
+		height: 63px
+		width: 132px
+		color: #fff
+		line-height: 34px
+		display: block
+		z-index: 1
+		span
+			line-height: 1.2
+			width: 50%
+			vertical-align: middle
+			display: inline-block
+	.icon
+		margin-right: 5px
+		vertical-align: top

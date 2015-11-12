@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#FEB737;stroke-width:4;stroke-linecap:round;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#E191E5;stroke-width:4;stroke-linecap:round;stroke-miterlimit:10;}
+	.st2{fill:none;stroke:#FFFFFF;stroke-width:4;stroke-linecap:round;stroke-miterlimit:10;}
+	.st3{fill:none;stroke:#A6C3FD;stroke-width:4;stroke-linecap:round;stroke-miterlimit:10;}
+</style>
+<line class="st0" x1="12" y1="20" x2="28" y2="20"/>
+<line class="st0" x1="20" y1="12" x2="20" y2="28"/>
+<path class="st1" d="M2.3,20c0-9.8,7.9-17.7,17.7-17.7"/>
+<path class="st2" d="M20,2.3c9.8,0,17.7,7.9,17.7,17.7"/>
+<path class="st3" d="M37.7,20c0,9.8-7.9,17.7-17.7,17.7"/>
+<path class="st2" d="M20,37.7c-9.8,0-17.7-7.9-17.7-17.7"/>
+</svg>
