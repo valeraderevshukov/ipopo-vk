@@ -70,12 +70,23 @@ body
 	line-height: 1.4
 	max-height: 800px
 	overflow: auto
+	&.is-hidden
+		overflow: hidden
 a
 	text-decoration: none
 
 
 // common blocks
 .out
+	margin: 0 auto 65px
+	padding: 0 8px
+	width: 760px
+	height: 100%
+	height: auto
+	min-height: 100%
+	+box
+
+.center
 	margin: 0 auto
 	padding: 0 8px
 	width: 760px
@@ -90,7 +101,7 @@ a
 	+clr
 	.title
 		float: left
-	.show-more
+	.btn-text
 		float: right
 
 // title
@@ -102,14 +113,24 @@ a
 	.icon
 		margin-right: 2px
 
-// show-more
-.show-more
+// title-small
+.title-small
+	color: $orange
+	line-height: 1
+	+b700
+	font-size: 24px
+
+// btn-text
+.btn-text
 	color: $purple
 	+b700
 	font-size: 18px
 	text-transform: uppercase
+	transition: opacity .2s
 	background-color: transparent
 	display: inline-block
+	&:hover
+		opacity: .8
 	.icon
 		margin-right: 2px
 
@@ -121,20 +142,42 @@ a
 	+p400
 	text-align: center
 	font-size: 12px
-	line-height: 24px
+	line-height: 25px
 	border-radius: 24px
-	transition: background .2s
+	transition: background .2s, color .2s
 	background: $purple
+	+box
 	display: inline-block
 	&:hover
 		background: darken( $purple, 20%)
-button.btn
-	line-height: 1
+	&_pink
+		background: $pink
+		&:hover
+			background: darken( $pink, 20%)
+	&_bord
+		color: $purple
+		line-height: 24px
+		border: 2px solid $purple
+		background: #fff
+		&:hover
+			color: #fff
+			background: $purple
+	&_big
+		padding: 0 28px
+		height: 32px
+		font-size: 16px
+		line-height: 33px
+	.icon
+		margin-right: 5px
+		vertical-align: middle
 
 // field
 .field
 	& + .field
 		margin-top: 30px
+	&__text
+		margin-bottom: 20px
+		color: $gray
 
 // row
 .row
@@ -151,6 +194,11 @@ button.btn
 		margin-left: 0
 	&:nth-child(odd)
 		.item__in
+			&:hover
+				&:before
+					transform: rotate(-1deg)
+				&:after
+					transform: rotate(0deg)
 			&:before
 				transform: rotate(-2deg)
 			&:after
@@ -159,10 +207,16 @@ button.btn
 		position: relative
 		margin-bottom: 14px
 		font-size: 0
+		&:hover
+			&:before
+				transform: rotate(1deg)
+			&:after
+				transform: rotate(0deg)
 		&:before,
 		&:after
 			position: absolute
 			content: ''
+			transition: transform .2s
 			border-radius: 5px
 		&:before
 			top: 2px
@@ -198,6 +252,25 @@ button.btn
 			position: relative
 			z-index: 1
 			display: block
+	&__icon
+		position: absolute
+		top: 8px
+		right: 8px
+		height: 24px
+		width: 24px
+		line-height: 24px
+		text-align: center
+		transition: opacity .2s
+		border-radius: 50%
+		z-index: 4
+		background: #fff
+		&:hover
+			opacity: .8
+		&.is-left
+			right: auto
+			left: 8px
+		.icon
+			vertical-align: middle
 	.holiday
 		line-height: 1.2
 	.date
@@ -217,9 +290,14 @@ button.btn
 	&:hover
 		border-color: $purple
 
+// my-event
+.my-event
+	color: $l_gray
+
 // holiday
 .holiday
 	font-size: 18px
+	letter-spacing: -.8px
 	+b700
 
 // date
@@ -228,3 +306,23 @@ button.btn
 	font-size: 12px
 	color: $orange
 	display: block
+
+// to-all
+.to-all
+	margin-top: 24px
+	text-align: center
+
+// copy
+.copy
+	+p400
+	font-size: 10px
+	
+// footer
+footer
+	margin-top: -27px
+	color: $gray
+	.center
+		padding-top: 10px
+		height: 27px
+		+box
+		background: url(../img/foot-bg.png) 50% 0 no-repeat

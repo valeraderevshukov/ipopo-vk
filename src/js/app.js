@@ -1,3 +1,3 @@
 //= lib/jquery.js
-//= lib/slick.min.js
+//= lib/jquery-ui.min.js
 //= common.js

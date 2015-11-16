@@ -32,18 +32,30 @@ header
 		margin-left: 20px
 		vertical-align: top
 		font-size: 14px
+		transition: opacity .2s
 		background-size: contain
 		background-repeat: no-repeat
 		background-position: 0 0
 		display: inline-block
+		&:hover
+			opacity: .8
+		&.is-active
+			a
+				color: $purple
 		&:first-child
 			margin-left: 0
 		&.is-orange
 			background-image: url(../img/menu-orange.png)
+			&.is-active
+				background-image: url(../img/active-orange.png)
 		&.is-pink
 			background-image: url(../img/menu-pink.png)
+			&.is-active
+				background-image: url(../img/active-pink.png)
 		&.is-blue
 			background-image: url(../img/menu-blue.png)
+			&.is-active
+				background-image: url(../img/active-blue.png)
 		&.is-purple
 			background-image: url(../img/menu-purple.png)
 	a

@@ -1,0 +1,193 @@
+.hasDatepicker
+	cursor: pointer
+.ui-widget-content
+	position: relative
+	z-index: 11 !important
+	display: none
+.ui-datepicker
+	//width: 290px
+	padding: 0 5px 10px
+	margin-top: 9px
+	margin-left: 18px
+	display: none
+	background: #fff
+	border-radius: 3px
+	border: 4px solid $orange
+	position: relative
+	display: none
+	&.is-visible
+		display: block
+	&:before
+		content: ""
+		position: absolute
+		width: 12px
+		height: 12px
+		background: #fff
+		border-top: 4px solid $orange
+		border-right: 4px solid $orange 
+		top: -9px
+		left: 50%
+		margin-left: -5px
+		+rotate(-45)
+		    
+	.ui-datepicker-calendar
+		margin: 0
+	thead
+		span
+			font-size: 16px
+			color: $orange
+			+p400
+	tbody
+		td
+			padding: 0px 3px
+			color: $purple
+			font-size: 16px
+			+p400
+.ui-datepicker-inline
+	display: block
+	box-shadow: none
+	border-radius: 0
+	border: 0
+	// tbody
+	// 	td
+	// 		border-color: #cbcbcb 
+	// 		&:first-child
+	// 			border-left: 1px solid #cbcbcb
+	// 		&:last-child
+	// 			border-right: 2px solid #cbcbcb
+.ui-datepicker .ui-datepicker-header
+	position: relative
+	padding: 20px 0 10px
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next
+	position: absolute
+	top: 50%
+	margin-top: -2px
+	+hide-text
+	cursor: pointer
+.ui-datepicker .ui-datepicker-prev
+	left: 13px
+	+s(arr-calend-r)
+	+tr(left .2s)
+	&:hover
+		left: 11px
+.ui-datepicker .ui-datepicker-next
+	right: 13px
+	+s(arr-calend-l)
+	+tr(right .2s)
+	&:hover
+		right: 11px
+.ui-datepicker .ui-datepicker-prev span,
+.ui-datepicker .ui-datepicker-next span
+	display: block
+	position: absolute
+	left: 50%
+	margin-left: -8px
+	top: 50%
+	margin-top: -8px
+
+.ui-datepicker .ui-datepicker-title
+	margin: 0 2.3em
+	text-align: center
+	font-size: 16px
+	text-transform: uppercase
+	color: $purple
+	+b700
+
+.ui-datepicker-month,
+.ui-datepicker-year
+	width: 45%
+	font-size: 16px
+	margin: 0
+.ui-datepicker-month
+	margin-right: 5%
+.ui-datepicker table
+	width: 100%
+	font-size: .9em
+	border-collapse: collapse
+	margin: 0 0 .4em
+
+.ui-datepicker th
+	padding: .7em .3em
+	text-align: center
+	font-size: 15px
+	font-weight: normal  
+	border: 0
+.ui-datepicker td
+	vertical-align: middle
+	text-align: center
+	a,
+	span
+		display: block
+		background: transparent
+		border-radius: 50% 
+		text-align: center
+		width: 32px 
+		height: 32px
+		line-height: 32px
+		text-decoration: none
+		font-size: 16px
+		color: $purple
+		transition: background-color .2s, color .2s
+		&:hover
+			background-color: $purple
+			color: #FFF  
+	&.ui-datepicker-current-day
+		a,
+		span
+			background: $purple
+			color: #FFF
+	&.ui-datepicker-today
+		a,
+		span
+			background: $purple
+			color: #FFF
+.ui-datepicker .ui-datepicker-buttonpane
+	background-image: none
+	margin: .7em 0 0 0
+	padding: 0 .2em
+	border-left: 0
+	border-right: 0
+	border-bottom: 0
+
+.ui-datepicker .ui-datepicker-buttonpane button
+	float: right
+	margin: .5em .2em .4em
+	cursor: pointer
+	padding: .2em .6em .3em .6em
+	width: auto
+	overflow: visible
+
+.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current
+	float: left
+
+.ui-datepicker.ui-datepicker-multi
+	width: auto
+
+.ui-datepicker-multi .ui-datepicker-group
+	float: left
+
+.ui-datepicker-multi .ui-datepicker-group table
+	width: 95%
+	margin: 0 auto .4em
+
+.ui-datepicker-multi-2 .ui-datepicker-group
+	width: 50%
+
+.ui-datepicker-multi-3 .ui-datepicker-group
+	width: 33.3%
+
+.ui-datepicker-multi-4 .ui-datepicker-group
+	width: 25%
+
+.ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header,
+.ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header
+	border-left-width: 0
+
+.ui-datepicker-multi .ui-datepicker-buttonpane
+	clear: left
+
+.ui-datepicker-row-break
+	clear: both
+	width: 100%
+	font-size: 0
